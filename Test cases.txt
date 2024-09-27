@@ -1,0 +1,105 @@
+Test Cases for Task 1: Amazon
+Scenario 1: Search for Car Accessories
+
+    Test Case 1.1: Open Amazon and Search
+        Precondition: Browser is launched.
+        Steps:
+            Navigate to https://www.amazon.com/.
+            Enter "car accessories" in the search bar.
+            Click the search button.
+        Expected Result: Search results display items related to "car accessories".
+
+    Test Case 1.2: Select and Add First Item to Cart
+        Precondition: Search results are displayed.
+        Steps:
+            Click the first item.
+            Click "Add to Cart" on the item page.
+        Expected Result: Item is added to the cart with a confirmation message.
+
+    Test Case 1.3: Verify Item in Cart
+        Precondition: Item is added to the cart.
+        Steps:
+            Go to the cart.
+        Expected Result: Cart shows the added item with correct details.
+
+Scenario 2: Today's Deals
+
+    Test Case 2.1: Open Today's Deals
+        Precondition: Browser is launched.
+        Steps:
+            Navigate to https://www.amazon.com/gp/goldbox.
+        Expected Result: Today's Deals page is displayed.
+
+    Test Case 2.2: Apply Filters for Headphones and Grocery
+        Precondition: Today's Deals page is displayed.
+        Steps:
+            Select "Headphones" and "Grocery" filters.
+        Expected Result: Relevant items are displayed.
+
+    Test Case 2.3: Apply Discount Filter
+        Precondition: Filtered items are displayed.
+        Steps:
+            Select "10% off or more" discount filter.
+        Expected Result: Items with at least a 10% discount are shown.
+
+    Test Case 2.4: Select Item Without Page Navigation
+        Precondition: Discounted items are displayed.
+        Steps:
+            Select any item.
+            Click "Add to Cart".
+        Expected Result: Item is added to the cart.
+
+Note: Amazon does not have a paging system; all items are shown on a single page.
+Test Cases for Task 2: KSRTC Bus Booking
+
+    Test Case 1: Open KSRTC Website
+        Precondition: Browser is launched.
+        Steps:
+            Navigate to https://ksrtc.in/oprs-web/guest/home.do?h=1.
+        Expected Result: KSRTC homepage is displayed.
+
+    Test Case 2: Choose Route
+        Precondition: KSRTC homepage is displayed.
+        Steps:
+            Select "CHIKKAMAGALURU" as the departure.
+            Select "BENGALURU" as the destination.
+        Expected Result: Route selection is displayed correctly.
+
+    Test Case 3: Choose Arrival Date
+        Precondition: Route selection is done.
+        Steps:
+            Select arrival date using the date picker.
+        Expected Result: Arrival date is set correctly.
+
+    Test Case 4: Search for Bus
+        Precondition: Arrival date is set.
+        Steps:
+            Click "Search for bus".
+        Expected Result: List of available buses is displayed.
+
+    Test Case 5: Select a Seat
+        Precondition: Bus options are displayed.
+        Steps:
+            Select a seat.
+        Expected Result: Seat selection is confirmed.
+
+    Test Case 6: Choose Boarding and Dropping Points
+        Precondition: Seat is selected.
+        Steps:
+            Choose boarding and dropping points.
+        Expected Result: Selected points are displayed.
+
+    Test Case 7: Fill Customer and Passenger Details
+        Precondition: Boarding and dropping points are selected.
+        Steps:
+            Fill in customer details (Name, Phone: 6789125987).
+            Leave email field blank.
+            Fill in passenger details.
+        Expected Result: Customer details are filled; "Make Payment" button is grayed out due to the missing email.
+
+    Test Case 8: Click Make Payment
+        Precondition: Customer and passenger details are filled.
+        Steps:
+            Click "Make Payment".
+        Expected Result: "Make Payment" button remains grayed out, preventing navigation to the payment details page.
+Note: The KSRTC booking process did not reach the payment page because the "Make Payment" button is disabled due to the missing email field.
